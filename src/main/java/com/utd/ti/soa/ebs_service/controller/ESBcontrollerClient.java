@@ -33,7 +33,7 @@ public class ESBcontrollerClient {
         System.out.println("Enviando solicitud a Node.js user");
 
         return webClient.post()
-                .uri("http://api_client:3003/api/client")
+                .uri("http://ecommerceproyectserviceclient-production.up.railway.app:37257/api/client")
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(client)
                 .retrieve()
@@ -59,7 +59,7 @@ public class ESBcontrollerClient {
         System.out.println("📤 Enviando solicitud a Node.js para obtener todos los clientes");
 
         return webClient.get()
-                .uri("http://api_client:3003/api/client")
+                .uri("http://ecommerceproyectserviceclient-production.up.railway.app:37257/api/client")
                 .retrieve()
                 .bodyToMono(String.class)
                 .map(response -> ResponseEntity.ok().body(response))
@@ -78,7 +78,7 @@ public class ESBcontrollerClient {
         }
 
         return webClient.patch()
-                .uri("http://api_client:3003/api/client/" + id)
+                .uri("http://ecommerceproyectserviceclient-production.up.railway.app:37257/api/client/" + id)
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(client)
                 .retrieve()
@@ -98,7 +98,7 @@ public class ESBcontrollerClient {
         }
 
         return webClient.delete()
-                .uri("http://api_client:3003/api/client/" + id)
+                .uri("http://ecommerceproyectserviceclient-production.up.railway.app:37257/api/client/" + id)
                 .retrieve()
                 .bodyToMono(String.class)
                 .map(response -> ResponseEntity.ok().body(response))
