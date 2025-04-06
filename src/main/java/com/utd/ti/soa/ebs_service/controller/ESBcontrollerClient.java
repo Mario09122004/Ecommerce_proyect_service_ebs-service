@@ -33,7 +33,7 @@ public class ESBcontrollerClient {
         System.out.println("Enviando solicitud a Node.js user");
 
         return webClient.post()
-                .uri("https://ecommerceproyectserviceclient-production.up.railway.app:37257/api/client")
+                .uri("https://ecommerceproyectserviceclient-production.up.railway.app/api/client")
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(client)
                 .retrieve()
