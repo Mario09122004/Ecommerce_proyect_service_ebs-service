@@ -3,5 +3,5 @@ spring:
     name: ebs-service
 
 server:
-  port: 3500
+  port: 8080
 
