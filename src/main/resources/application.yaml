@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: ebs-service
-
-server:
-  port: 3500
-
